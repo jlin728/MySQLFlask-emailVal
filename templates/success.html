@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Email Validation</title>
+ 
+    <style>
+        body {
+            background: #d6d6d6
+            no-repeat right top;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(2, 2, 2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>{{ session['email'] }} was successfully updated!!!</h2>
+<hr>
+    <h2>Emails Entered</h2>
+        <table border=3>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Created On</th>
+                <th>Delete</th>
+            </tr>
+    
+    <!-- for loop 'database name' database -->
+    
+    </form>
+    {% for user in all_users %}
+            <tr>        
+                <td>{{ user['id'] }}</td>
+                <td>{{ user['email'] }}</a></td>
+                <td>{{ user['created_at'] }}</td>
+                <td><input type="submit" name="Delete" value="Delete"></td>
+            </tr>
+    {% endfor %}
+
+        </table><br>
+        
+        <!-- <form action='/remove' method='post'>
+            <button>Delete</button>
+        </form> -->
+
+</body>
+</html>
